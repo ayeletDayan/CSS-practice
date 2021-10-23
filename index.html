@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>misterBlogger</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="read-on">
+        <div class="read-on-back-top"></div>
+        <div class="read-on-back-left"></div>
+        <div class="read-on-back-right"></div>
+        <div class="read-on-back-buttom"></div>
+        <div class="card">
+            <div class="card-side flex space-between">
+                <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                <p class="card-text"> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br> Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+                </p><br> <button class="close-read" onclick="close()">CLOSE</button>
+            </div>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="main-layout flex space-between align-center">
+            <div class="logo">Blogin<span style="color: #58C93A;">.</span></div>
+            <ul class="main-nav flex clean-list">
+                <li><a href="#" class=".nev-txt">Journal</a></li>
+                <li><a href="#" class=".nev-txt">About</a></li>
+                <li><a href="#" class=".nev-txt">Work</a></li>
+                <li><a href="#" class=".nev-txt">Contact</a></li>
+            </ul>
+            <button class="btn-menu" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+    <main class="main-content main-layout">
+        <div class="card">
+            <img src="img/001.png" alt="" class="card-image" />
+            <div class="card-side flex space-between">
+                <h2 class="card-title">Duis aute irure dolor in
+                    henderit in voluptate.</h2>
+                <p class="card-text">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                    doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br>
+
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur...
+                </p>
+                <div class="Continue-Reading" onmouseover="continueReading()" onmouseout="outContinueReading()"
+                    onclick="readMore()">Continue Reading</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/002.png" alt="" class="card-image" />
+            <div class="card-side flex space-between">
+                <h2 class="card-title">Duis aute irure dolor in
+                    henderit in voluptate.</h2>
+                <p class="card-text">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                    doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur...
+                </p>
+                <div class="Continue-Reading" onmouseover="continueReading()" onmouseout="outContinueReading()"
+                onclick="readMore()">Continue Reading</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/003.png" alt="" class="card-image" />
+            <div class="card-side flex space-between">
+                <h2 class="card-title">Duis aute irure dolor in
+                    henderit in voluptate.</h2>
+                <p class="card-text">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                    doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur...
+                </p>
+                <div class="Continue-Reading" onmouseover="continueReading()" onmouseout="outContinueReading()"
+                onclick="readMore()">Continue Reading</div>
+            </div>
+        </div>
+        <div class="pre-next flex space-between">
+            <div class="Previous">← Previous</div>
+            <div class="Next">Next →</div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <h3 class="Blogin-footer">Blogin<span style="color: #58C93A;">.</span></h3>
+        <small>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at <span
+                style="font-weight: bold;">Pixelhint.com</span></small>
+        <div class="social-nav">
+            <span><a href="#" class="fa fa-facebook"></a></span><span><a href="#"
+                    class="fa fa-twitter"></a></span></span><span><a href="#"
+                    class="fa fa-behance"></a></a></span><span><a href="#" class="fa fa-dribbble"></a></span>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open');
+        }
+    </script>
+    <script>
+        function continueReading() {
+            const elTxt = document.querySelector(".Continue-Reading");
+            elTxt.innerHTML += ' →';
+        }
+    </script>
+    <script>
+        function outContinueReading() {
+            const elTxt = document.querySelector(".Continue-Reading");
+            elTxt.innerHTML = 'Continue Reading';
+        }
+    </script>
+    <script>
+        function readMore() {
+            const elBody = document.querySelector(".read-on");
+            elBody.style.display = 'block';
+        }
+    </script>
+    <script>
+        function close(){
+            const elBody = document.querySelector(".read-on");
+            elBody.style.display = 'none'; 
+        }
+    </script>
+
+</body>
+
+</html>
